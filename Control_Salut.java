@@ -11,7 +11,8 @@ public static void main(String[] args) {
     int edat;
     double pes,alçada;
     Scanner esc = new Scanner(System.in);
-    while (true) {
+    while (true) //Bucle infinit per tornar al menu principal 
+    {
     //inicialitzar menu 
     System.out.println("------------------------------");
     System.out.println("Benvingut al nostre programa de Control de Salut");
@@ -29,10 +30,12 @@ public static void main(String[] args) {
         switch (opcioTriada) 
         {
             case "a", "a)", "A", "A)", "Introduir dades personals", "introduir dades personals", "a) Introduir dades personals", "A) Introduir dades personals", "a) introduir dades personals", "A) introduir dades personals":
-            System.out.println("Has triat l'opcio: Introduir dades personals");
-            System.out.println("Introdueix el teu nom complet:");
-            nomComplet = esc.nextLine();
-        if (nomComplet.trim().isEmpty()) {
+                
+                System.out.println("Has triat l'opcio: Introduir dades personals");
+                System.out.println("Introdueix el teu nom complet:");
+                nomComplet = esc.nextLine();
+            
+                if (nomComplet.trim().isEmpty()) {
                 System.out.println("ERROR: El nom no pot estar buit.");
                 System.out.println("");
                 System.out.println("Tornant al menú principal...");
@@ -40,17 +43,28 @@ public static void main(String[] args) {
                 break;
                 }
                  // es salta tot el codi i aleshores el bucle while torna al menú principal
-        if (nomComplet.length() > 50) {
+
+                else if (nomComplet.length() > 50) {
                 System.out.println("ERROR: El nom és massa llarg.");
                 System.out.println("");
                 System.out.println("Tornant al menú principal...");
                 System.out.println("");
                 break;
             
-        }
-            
-                System.out.println("Introdueix la teva edat:");
-        try {
+                }
+                else if (!nomComplet.matches("[a-zA-ZÀ-ÿ\\s]"))// si el nom no conté només lletres i espais
+                {
+                System.out.println("ERROR: El nom no pot contenir números.");
+                System.out.println("");
+                System.out.println("Tornant al menú principal...");
+                System.out.println("");
+                break;
+                }
+           
+        
+
+            System.out.println("Introdueix la teva edat:");
+            try {
             edat = esc.nextInt();
             esc.nextLine(); // neteja el buffer
             if (edat <= 0 || edat > 120) {
@@ -60,18 +74,18 @@ public static void main(String[] args) {
                 System.out.println("");
                 break;
             }
-        }       
-        catch (InputMismatchException e) {
-            System.out.println("Edat no pot ser decimal ni text.");
-            System.out.println("");
-            System.out.println("Tornant al menú principal...");
-            System.out.println("");
+            }       
+            catch (InputMismatchException e) {
+                System.out.println("Edat no pot ser decimal ni text.");
+                System.out.println("");
+                System.out.println("Tornant al menú principal...");
+                System.out.println("");
             
             break; 
             
-        }
-        catch (Exception e) 
-        {
+            }
+            catch (Exception e) 
+            {
                 System.out.println("Error: Introdueix un valor vàlid per a l'edat.");
                 System.out.println("");
                 System.out.println("Tornant al menú principal...");
@@ -84,6 +98,39 @@ public static void main(String[] args) {
                 System.out.println(" ");
                 System.out.println("Introdueix el teu pes (en kg):");
                 pes = esc.nextDouble();
+                if (pes <= 0) 
+                {
+                    System.out.println("ERROR: El pes és massa petit.");
+                    System.out.println("");
+                    System.out.println("Tornant al menú principal...");
+                    System.out.println("");
+                    
+                    break;
+                    
+                }
+                else if (pes > 400) 
+                {
+                    System.out.println("ERROR: El pes és massa gran.");
+                    System.out.println("");
+                    System.out.println("Tornant al menú principal...");
+                    System.out.println("");
+                    
+                    break;
+                    
+                
+                }
+                else if (pes // menys o 2 decimals
+                        != Math.round(pes * 100.0) / 100.0)
+                {
+                    System.out.println("ERROR: El pes és massa petit.");
+                    System.out.println("");
+                    System.out.println("Tornant al menú principal...");
+                    System.out.println("");
+                    
+                    break;
+                    
+                }
+                { 
                 System.out.println(" ");
                 System.out.println("Introdueix la teva alçada (en metres):");
                 alçada = esc.nextDouble();
@@ -119,4 +166,6 @@ public static void main(String[] args) {
 
 }
 }
+}
+
 
