@@ -7,7 +7,7 @@ public static void main(String[] args) {
     String nomComplet = null;
     String opcioTriada, tornarAlMenu, elegirModificar;
     int edat = 0;
-    double pes = 0,alçada = 0;
+    double pes = 0,alçada = 0, imc = 0;
     Scanner esc = new Scanner(System.in);
     boolean dadesIntroduides = false;
     while (true) //Bucle infinit per tornar al menu principal 
@@ -460,7 +460,63 @@ public static void main(String[] args) {
                                     
                             }            
             
-            
+            case "c", "c)", "C", "C)", "Veure dades personals", "veure dades personals", "c) Veure dades personals", "C) Veure dades personals", "c) veure dades personals", "C) veure dades personals":
+                
+                System.out.println("Has triat l'opcio: Veure dades personals");
+                System.out.println(" ");
+
+                if (!dadesIntroduides) 
+                {
+                    System.out.println("No hi ha dades per veure. Si us plau, introdueix les teves dades primer.");
+                    System.out.println("");
+                    System.out.println("Tornant al menú principal...");
+                    System.out.println("");
+                    break; // Torna al menú principal
+
+                } 
+                else 
+                {
+                    System.out.println("Mostrant dades personals:");
+                    System.out.printf("Nom complet: %s%n", nomComplet);
+                    System.out.println(" ");
+                    System.out.println("Edat: " + edat);
+                    System.out.println(" ");
+                    System.out.printf("Pes: %.2f", pes, "kg");
+                    System.out.println(" ");
+                    System.out.printf("Alçada: %.2f", alçada, "metres");
+                    System.out.println(" ");
+                    imc = (pes / (alçada*alçada));
+                    System.out.println("IMC: " + imc);
+                        if (imc <18.5)
+                            System.out.println("Vosté està en un index de pes baix");
+                            System.out.println(" ");
+                            System.out.println("Vols tornar al menú principal (si/no)");
+                            tornarAlMenu = esc.nextLine();
+
+                            if (tornarAlMenu.equals("si") || tornarAlMenu.equals("Si") || tornarAlMenu.equals("SI") || tornarAlMenu.equals("sí") || tornarAlMenu.equals("Sí") || tornarAlMenu.equals("SÍ")) 
+                            {
+                                System.out.println(" ");
+                                System.out.println("Tornant al menú principal...");
+                                break; // Torna al menú principal
+                            } 
+                            else 
+                            {
+                                System.out.println("Sortint del programa...");
+                                esc.close();
+                                System.exit(0);
+                                // Sortir del programa
+                            }
+                        if (pes >= 18.5 || pes<=24.99999) 
+                        {
+                          System.out.println("Vosté està en un index de pes normal");  
+                        }
+                    
+                    System.out.println("Tornant al menú principal...");
+                    System.out.println("");
+                    break;
+                    
+                }
+    }
     }
 
 
@@ -470,7 +526,7 @@ public static void main(String[] args) {
     }
     
 
-}
+
 
 
 
