@@ -42,6 +42,7 @@ public static void main(String[] args) {
                 System.out.println("");
                 System.out.println("Tornant al menú principal...");
                 System.out.println("");
+                esc.nextLine();
                 break;
                 }
                  // es salta tot el codi i aleshores el bucle while torna al menú principal
@@ -51,6 +52,7 @@ public static void main(String[] args) {
                 System.out.println("");
                 System.out.println("Tornant al menú principal...");
                 System.out.println("");
+                esc.nextLine();
                 break;
             
                 }
@@ -60,6 +62,7 @@ public static void main(String[] args) {
                 System.out.println("");
                 System.out.println("Tornant al menú principal...");
                 System.out.println("");
+                esc.nextLine();
                 break;
                 }
     
@@ -73,6 +76,7 @@ public static void main(String[] args) {
                         System.out.println("");
                         System.out.println("Tornant al menú principal...");
                         System.out.println("");
+                        esc.nextLine();
                         break;
                     }
                 }       
@@ -82,6 +86,7 @@ public static void main(String[] args) {
                     System.out.println("");
                     System.out.println("Tornant al menú principal...");
                     System.out.println("");
+                    esc.nextLine();
                     break;
                      
                 
@@ -92,6 +97,7 @@ public static void main(String[] args) {
                     System.out.println("");
                     System.out.println("Tornant al menú principal...");
                     System.out.println("");
+                    esc.nextLine();
                     break;         
                     
                 }
@@ -109,6 +115,7 @@ public static void main(String[] args) {
                         System.out.println("");
                         System.out.println("Tornant al menú principal...");
                         System.out.println("");
+                        esc.nextLine();
                         break;
                     }
 
@@ -118,6 +125,7 @@ public static void main(String[] args) {
                         System.out.println("");
                         System.out.println("Tornant al menú principal...");
                         System.out.println("");
+                        esc.nextLine();
                         break;
                     }
 
@@ -129,6 +137,7 @@ public static void main(String[] args) {
                     System.out.println("");
                     System.out.println("Tornant al menú principal...");
                     System.out.println("");
+                    esc.nextLine();
                     break;
                 }
                 catch (Exception e) 
@@ -137,6 +146,7 @@ public static void main(String[] args) {
                     System.out.println("");
                     System.out.println("Tornant al menú principal...");
                     System.out.println("");
+                    esc.nextLine();
                     break;
                         
                 }
@@ -155,6 +165,7 @@ public static void main(String[] args) {
                             System.out.println("");
                             System.out.println("Tornant al menú principal...");
                             System.out.println("");
+                            esc.nextLine();
                             break;
                         } 
                         else if (alçada > 2.5) 
@@ -163,6 +174,7 @@ public static void main(String[] args) {
                             System.out.println("");
                             System.out.println("Tornant al menú principal...");
                             System.out.println("");
+                            esc.nextLine();
                             break;
                         }
 
@@ -174,6 +186,7 @@ public static void main(String[] args) {
                             System.out.println("");
                             System.out.println("Tornant al menú principal...");
                             System.out.println("");
+                            esc.nextLine();
                             break;
                         }
 
@@ -185,6 +198,8 @@ public static void main(String[] args) {
                     System.out.println("");
                     System.out.println("Tornant al menú principal...");
                     System.out.println("");
+                    esc.nextLine();
+                    break;
                     
                 }
                 
@@ -204,7 +219,7 @@ public static void main(String[] args) {
                         System.out.println("Sortint del programa...");
                         esc.close();
                         programa = false;
-                        ; // Sortir del programa
+                         // Sortir del programa
                     }
 
           
@@ -220,6 +235,7 @@ public static void main(String[] args) {
                     System.out.println("");
                     System.out.println("Tornant al menú principal...");
                     System.out.println("");
+                    esc.nextLine();
                     break; // Torna al menú principal
 
                 } 
@@ -244,6 +260,7 @@ public static void main(String[] args) {
                             System.out.println("");
                             System.out.println("Tornant al menú principal...");
                             System.out.println("");
+                            esc.nextLine();
                             break;
                             }
                             // es salta tot el codi i aleshores el bucle while torna al menú principal
@@ -253,6 +270,7 @@ public static void main(String[] args) {
                             System.out.println("");
                             System.out.println("Tornant al menú principal...");
                             System.out.println("");
+                            esc.nextLine();
                             break;
                         
                             }
@@ -262,6 +280,7 @@ public static void main(String[] args) {
                             System.out.println("");
                             System.out.println("Tornant al menú principal...");
                             System.out.println("");
+                            esc.nextLine();
                             break;
                             }
                                  System.out.println(" ");
@@ -277,7 +296,7 @@ public static void main(String[] args) {
                                             System.out.println("Sortint del programa...");
                                             esc.close();
                                             programa = false;
-                                            ; // Sortir del programa
+                                            // Sortir del programa
                                         }
                                   
                             break;
@@ -293,6 +312,7 @@ public static void main(String[] args) {
                                         System.out.println("");
                                         System.out.println("Tornant al menú principal...");
                                         System.out.println("");
+                                        esc.nextLine();
                                         break;
                                     }
                                 }       
@@ -302,6 +322,7 @@ public static void main(String[] args) {
                                     System.out.println("");
                                     System.out.println("Tornant al menú principal...");
                                     System.out.println("");
+                                    esc.nextLine();
                                     break;
                                     
                                 
@@ -312,6 +333,7 @@ public static void main(String[] args) {
                                     System.out.println("");
                                     System.out.println("Tornant al menú principal...");
                                     System.out.println("");
+                                    esc.nextLine();
                                     break;         
                                     
                                 }
@@ -344,6 +366,7 @@ public static void main(String[] args) {
                                         System.out.println("");
                                         System.out.println("Tornant al menú principal...");
                                         System.out.println("");
+                                        esc.nextLine();
                                         break;
                                     }
 
@@ -353,6 +376,7 @@ public static void main(String[] args) {
                                         System.out.println("");
                                         System.out.println("Tornant al menú principal...");
                                         System.out.println("");
+                                        esc.nextLine();
                                         break;
                                     }
 
@@ -405,6 +429,7 @@ public static void main(String[] args) {
                                         System.out.println("");
                                         System.out.println("Tornant al menú principal...");
                                         System.out.println("");
+                                        esc.nextLine();
                                         break;
                                     } 
                                     else if (alçada > 2.5) 
@@ -413,6 +438,7 @@ public static void main(String[] args) {
                                         System.out.println("");
                                         System.out.println("Tornant al menú principal...");
                                         System.out.println("");
+                                        esc.nextLine();
                                         break;
                                     }
 
@@ -424,6 +450,7 @@ public static void main(String[] args) {
                                         System.out.println("");
                                         System.out.println("Tornant al menú principal...");
                                         System.out.println("");
+                                        esc.nextLine();
                                         break;
                                     }
 
@@ -435,6 +462,8 @@ public static void main(String[] args) {
                                 System.out.println("");
                                 System.out.println("Tornant al menú principal...");
                                 System.out.println("");
+                                esc.nextLine();
+                                break;
                                 
                             }
                                     System.out.println(" ");
@@ -456,6 +485,7 @@ public static void main(String[] args) {
                         case "5", "Tornar al menú principal", "tornar al menú principal", "5. Tornar al menú principal", "5) Tornar al menú principal", "5) tornar al menú principal", "TORNAR AL MENÚ PRINCIPAL":
                             System.out.println("Tornant al menú principal...");
                             System.out.println("");
+                            esc.nextLine();
                             break; // Torna al menú principal
                         }
                                 
@@ -473,11 +503,13 @@ public static void main(String[] args) {
                     System.out.println("");
                     System.out.println("Tornant al menú principal...");
                     System.out.println("");
+                    esc.nextLine();
                     break; // Torna al menú principal
 
                 } 
                 else 
                 {
+                    nomComplet = normalitzarNom(nomComplet);
                     System.out.println("Mostrant dades personals:");
                     System.out.printf("Nom complet: %s%n", nomComplet);
                     System.out.println(" ");
@@ -542,7 +574,22 @@ public static void main(String[] args) {
 
 
     }
-    
+
+public static String normalitzarNom(String nom) {
+    String[] parts = nom.trim().split("\\s+");
+    StringBuilder normalized = new StringBuilder();
+
+    for (String part : parts) {
+        if (part.length() > 0) {
+            normalized.append(Character.toUpperCase(part.charAt(0)));
+            normalized.append(part.substring(1).toLowerCase());
+            normalized.append(" ");
+        }
+    }
+
+    return normalized.toString().trim();
+}
+
     
     }
     
