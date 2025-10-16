@@ -7,10 +7,12 @@ public static void main(String[] args) {
     String nomComplet = null;
     String opcioTriada, tornarAlMenu, elegirModificar;
     int edat = 0;
-    double pes = 0,alçada = 0, imc = 0;
+    double pes = 0,alçada = 0, imc = 0 ;
     Scanner esc = new Scanner(System.in);
-    boolean dadesIntroduides = false;
-    while (true) //Bucle infinit per tornar al menu principal 
+    boolean dadesIntroduides = false, programa = true;
+
+
+    while (programa) //Bucle infinit per tornar al menu principal 
     {
     //inicialitzar menu 
     System.out.println("------------------------------");
@@ -28,7 +30,7 @@ public static void main(String[] args) {
     //Anar a la opcio triada
         switch (opcioTriada) 
         {
-            case "a", "a)", "A", "A)", "Introduir dades personals", "introduir dades personals", "a) Introduir dades personals", "A) Introduir dades personals", "a) introduir dades personals", "A) introduir dades personals":
+            case "a", "a)", "A", "A)", "Introduir dades personals", "introduir dades personals", "a) Introduir dades personals", "A) Introduir dades personals", "a) introduir dades personals", "A) introduir dades personals" :
                 
                 System.out.println("Has triat l'opcio: Introduir dades personals");
                 System.out.println(" ");
@@ -201,7 +203,7 @@ public static void main(String[] args) {
                     } else {
                         System.out.println("Sortint del programa...");
                         esc.close();
-                        System.exit(0);
+                        programa = false;
                         ; // Sortir del programa
                     }
 
@@ -274,7 +276,7 @@ public static void main(String[] args) {
                                         else {
                                             System.out.println("Sortint del programa...");
                                             esc.close();
-                                            System.exit(0);
+                                            programa = false;
                                             ; // Sortir del programa
                                         }
                                   
@@ -325,7 +327,7 @@ public static void main(String[] args) {
                                                 else {
                                                     System.out.println("Sortint del programa...");
                                                     esc.close();
-                                                    System.exit(0);
+                                                    programa = false;
                                                     ; // Sortir del programa
                                                 }
                             case "3", "Pes", "pes", "3. Pes", "3) Pes", "3) pes", "PES":
@@ -385,7 +387,7 @@ public static void main(String[] args) {
                                             else {
                                                 System.out.println("Sortint del programa...");
                                                 esc.close();
-                                                System.exit(0);
+                                                programa = false;
                                              // Sortir del programa
                                             }
 
@@ -447,7 +449,7 @@ public static void main(String[] args) {
                                             else {
                                                 System.out.println("Sortint del programa...");
                                                 esc.close();
-                                                System.exit(0);
+                                                programa = false;
                                                  // Sortir del programa
                                             }
 
@@ -487,9 +489,30 @@ public static void main(String[] args) {
                     System.out.println(" ");
                     imc = (pes / (alçada*alçada));
                     System.out.println("IMC: " + imc);
-                        if (imc <18.5)
+                    // calcular quin es el teu index dintre de la normalitat
+                        if (imc <18.5){
                             System.out.println("Vosté està en un index de pes baix");
+                        }
+                           
+                           
+                        if (pes >= 18.5 || pes<=24.99999) 
+                        {
+                          System.out.println("Vosté està en un index de pes normal"); 
+                          
+                        }
+                        else if (pes >= 25 || pes <= 29.9999)
+                        {
+                            System.out.println("Vosté està en un index de sobrepès");
                             System.out.println(" ");
+                       
+                        }
+                        else{
+                            System.out.println("Vosté està en un index d'obesitat");
+                           
+                        }
+
+                    
+                     System.out.println(" ");
                             System.out.println("Vols tornar al menú principal (si/no)");
                             tornarAlMenu = esc.nextLine();
 
@@ -502,20 +525,18 @@ public static void main(String[] args) {
                             else 
                             {
                                 System.out.println("Sortint del programa...");
-                                esc.close();
-                                System.exit(0);
+                    
+                                programa = false;
                                 // Sortir del programa
                             }
-                        if (pes >= 18.5 || pes<=24.99999) 
-                        {
-                          System.out.println("Vosté està en un index de pes normal");  
-                        }
                     
-                    System.out.println("Tornant al menú principal...");
-                    System.out.println("");
-                    break;
                     
                 }
+                case "d", "D", "d)", "D)", "Sortir del programa", "sortir del programa", "d) Sortir del programa", "d) sortir del programa", "D) Sortir del programa", "D) sortir del programa" :
+
+                System.out.println(" ");
+                System.out.println("Sortint del programa...");
+                programa = false;
     }
     }
 
